@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #0052CC;
+  --color-accent: #00B8D9;
+  --color-text-dark: #172B4D;
+  --color-text-muted: #6B778C;
+  --color-bg-light: #F4F5F7;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-text-dark antialiased bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-dark;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F0F5FF 100%);
+  }
+  
+  .massive-h1 {
+    font-size: clamp(3rem, 8vw, 82px);
+    line-height: 0.9;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+  }
+}
+
